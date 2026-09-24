@@ -1,0 +1,12 @@
+idade <- leia()
+renda <- leia()
+
+se renda < 1500 entao
+    escreva("Bronze")
+senao se renda < 3000 entao
+    escreva("Prata")
+senao se renda < 6000 entao
+    escreva("Ouro")
+senao
+    escreva("Diamante")
+fimse
