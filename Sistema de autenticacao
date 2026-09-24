@@ -1,0 +1,40 @@
+programa
+{
+    funcao inicio()
+    {
+        cadeia senha
+        inteiro tentativas
+        logico acesso
+
+        tentativas = 0
+        acesso = falso
+
+        enquanto (tentativas < 3 e acesso == falso)
+        {
+            escreva("Digite sua senha: ")
+            leia(senha)
+
+            se (senha == "1234")
+            {
+                escreva("Acesso autorizado!")
+                acesso = verdadeiro
+            }
+            senao
+            {
+                tentativas = tentativas + 1
+
+                escreva("Senha incorreta!\n")
+
+                se (tentativas < 3)
+                {
+                    escreva("Tentativas restantes: ", 3 - tentativas, "\n")
+                }
+            }
+        }
+
+        se (acesso == falso)
+        {
+            escreva("Acesso bloqueado. Você excedeu o número de tentativas.")
+        }
+    }
+}
